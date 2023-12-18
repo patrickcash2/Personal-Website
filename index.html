@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patrick Cash - Portfolio</title>
+    <style>
+        /*
+        colors
+        dark blue #0b1e33
+        blue #013c58
+        light blue #00537a
+        dark yellow #f5a201
+        yellow #ffba42
+        */
+        body, html { 
+            height: 100%; 
+            margin: 0; 
+            padding: 0; 
+            overflow-x: hidden;
+        }
+        header {
+            background: #013c58b3;
+            font-family: Arial, sans-serif;
+            color: #ffba42;
+            padding: 5px 0 5px 0;
+            height: 50px;
+            border-bottom: #f5a201 3px solid;
+            position: fixed;
+            top: 0; /* Header starts visible */
+            width: 100%;
+            transition: top 0.3s;
+            z-index: 100;
+        }
+        header a { color: #ffba42; text-decoration: none; text-transform: uppercase; font-size: 20px; }
+        header ul { padding: 0; list-style: none; text-align: center; }
+        header li { display: inline; padding: 0 30px 0 30px; }
+        header nav { float: center; margin-top: 10px; }
+        header .highlight, header .current a { color: #f5a201; font-weight: bold; }
+        header a:hover { color: #fff; font-weight: bold; }
+        .parallax-background { 
+            padding-top: 40px;
+            padding-bottom: 40px;
+            position: fixed; 
+            left: 0; 
+            top: 0; 
+            width: 25%; 
+            height: 100%; 
+            background-image: url('images/background-image.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: repeat;
+            z-index: 1;
+        }
+        .scrollable-content { 
+            padding-top: 60px;
+            padding-bottom: 160px;
+            padding-left: 20px;
+            padding-right: 20px;
+            position: absolute; 
+            left: 25%; 
+            width: auto; 
+            background-image: url('images/workbench.png');
+            /* background-color: #0b1e33d1; */
+            color: #ffba42;
+            font-family: Arial, sans-serif;
+            min-height: 100vh; 
+            overflow-y: auto;
+            z-index: 1;
+        }
+        .tile {    
+            background-color: #0b1e33d1;
+            padding: 1px 10px 4px 13px;
+            margin: 30px 0px 0px 0px;
+        }
+        .gallery { display: flex; flex-wrap: wrap; }
+        .gallery img { width: auto; height: 200px; margin: 10px; border: 5px solid #013c58; }
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: -50px;
+            width: 100%;
+            background-image: url('images/project3.png');
+            /* background: #00537a; */
+            color: #ffba42;
+            border-top: #f5a201 3px solid;
+            text-align: right;
+            padding: 10px 0;
+            z-index: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li class="current"><a href="#top">Patrick</a></li>
+                    <li><a href="#objective">Objective</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="parallax-background"></div>
+
+    <div class="scrollable-content">
+        <div class="tile">
+        <h2 id="objective">Objective</h2>
+            <p>I am an engineering student with technical skills in computer programming, embedded system design, and mathematics. I am seeking an opportunity to grow as a professional and be challenged to offer improvements and innovations in software development, design, and embedded systems. I believe my strong work ethic and thirst for knowledge will make me a strong member of your team.</p>
+        </div>
+
+        <div class="tile">
+        <h2 id="experience">Work Experience</h2>
+        <h3>Nebraska Furniture Mart, Omaha, NE (2007 - Present)</h3>
+        <p><strong>Website Support</strong><br>
+        • Chat and email, resolve customer issues, multitasking<br>
+        • Participate in improvement meetings<br>
+        • Provided technical insight to customers</p>
+
+        <h3>University of Nebraska at Lincoln, NE (2022 - Present)</h3>
+        <p><strong>Teaching Assistant</strong><br>
+        • Grader for Dr. Lamar Yang ECEN103, Course: Boolean logic, simplification, truth tables, circuits<br>
+        • Created key and graded for exams, quizzes, problem sets<br>
+        • Help with resolving issues with uploading assignments, maintain student privacy</p>
+        </div>
+
+        <div class="tile">
+        <h2 id="education">Education</h2>
+        <p>University of Nebraska at Lincoln (Fall 2020 - Spring 2024)<br>
+        • Computer Engineering Major w/ Math, CS Minor</p>
+        </div>
+
+        <div class="tile">
+        <h2 id="skills">Computer Skills</h2>
+        <p>• Programming: C, C++, Java, Python, Assembly (AVR, 8051, ARM, MIPS), Perl, HTML & CSS<br>
+        • Software: Excel, GitHub, LaTeX, MATLAB, VIM, VS Code, Visual Studio, Eclipse, Keil, STMCubeIDE<br>
+        • Operating Systems: Linux, MacOS Unix, MS-DOS</p>
+    </div>
+        <div class="tile">
+        <h2 id="projects">Projects</h2>
+        <p>• Printed circuit board design using two 555 timers to produce offset ring in variable frequency<br>
+        • Least-recently Used (LRU) algorithm for an operating system virtual memory management<br>
+        • Route finding software using Dijkstra’s sorting algorithm with Python<br>
+        • Microprocessor system on printed circuit board w/ decoding for RAM, ROM, Keypad, RTC…<br>
+        • Small Sustainable House Website using content management software</p>
+    </div>
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="images/CashPatrickPortrait.JPG" alt="Project 1">
+            <img src="images/soldered_PCB_ECEN435.png" alt="Project 2">
+            <!-- <img src="images/project3.png" alt="Project 3"> -->
+        </div>
+    </div>
+
+    <footer id="footer">
+            <p>Patrick Cash Portfolio &copy; 2023</p>
+            <p>This page is intended for demonstration purpose only. </p>
+            <p>Lorem ipsum dolor sit amet.</p>
+    </footer>
+
+    <script> // side image parallax
+        var parallax = document.querySelector('.parallax-background');
+        var speed = 0.1; // Adjust speed as needed
+
+        window.onscroll = function() {
+            var offset = window.pageYOffset;
+            parallax.style.backgroundPositionY = (- offset * speed) + "px";
+        };
+    </script>
+
+    <script> // header scroll
+        let lastScrollTop = 0; // Keep track of last scroll position
+        const header = document.getElementById('header');
+
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScroll <= 0) {
+                // At the top of the page
+                header.style.top = '0px';
+            } else if (currentScroll > lastScrollTop){
+                // Scrolling Down
+                header.style.top = '0px';
+            } else {
+                // Scrolling Up
+                header.style.top = '-60px';
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
+        }, false);
+    </script>
+
+<script>
+    const footer = document.getElementById('footer');
+    const footerHeight = 50; // Adjust based on the actual height of your footer
+
+    // Function to update the footer position
+    function updateFooterPosition() {
+        const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+        let footerPos = Math.min(scrollTop + clientHeight - scrollHeight, 0);
+
+        footer.style.bottom = `${footerPos}px`;
+    }
+
+    // Initially hide the footer
+    footer.style.bottom = `-${footerHeight}px`;
+
+    // Update footer position on scroll
+    window.addEventListener('scroll', updateFooterPosition);
+
+    // Update footer position on load (in case of refresh at the bottom of the page)
+    window.addEventListener('load', updateFooterPosition);
+</script>
+
+</body>
+</html>
